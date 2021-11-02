@@ -1,0 +1,54 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use  Illuminate\Contracts\View\View;
+
+class {{ class }} extends Controller
+{
+
+    public function index() :View
+    {
+        return View('{{ modelVariable }}.index');
+    }
+
+
+    public function create() :View
+    {
+        return View('{{ modelVariable }}.create');
+    }
+
+
+    public function store(Request $request) :RedirectResponse
+    {
+
+    }
+
+
+    public function show({{ model }} ${{ modelVariable }}) :View
+    {
+        //
+    }
+
+
+    public function edit({{ model }} ${{ modelVariable }}) :RedirectResponse
+    {
+        //
+    }
+
+
+    public function update(Request $request, {{ model }} ${{ modelVariable }}) :RedirectResponse
+    {
+        //
+    }
+
+
+    public function destroy({{ model }} ${{ modelVariable }}) :RedirectResponse
+    {
+        //
+    }
+}
